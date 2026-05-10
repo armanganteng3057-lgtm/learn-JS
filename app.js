@@ -1,8 +1,14 @@
+let daftarTeman = [
+  { nama: "Arman", umur: 19 },
+  { nama: "Nabila", umur: 17 },
+  { nama: "Irma", umur: 25 }
+];
+
 function sapaUser(nama, umur) {
   console.log("--- Kartu Nama ---");
   console.log("Halo bro", nama);
   console.log("Umur lu:", umur, "tahun");
-  
+
   if (umur >= 18) {
     console.log("Status: Udah dewasa, gas ngoding sampe pagi");
   } else {
@@ -11,6 +17,6 @@ function sapaUser(nama, umur) {
   console.log("------------------");
 }
 
-sapaUser("Arman", 19);
-sapaUser("Nabila", 17);
-sapaUser("Irma", 25);
+for (let i = 0; i < daftarTeman.length; i++) {
+  sapaUser(daftarTeman[i].nama, daftarTeman[i].umur);
+}
